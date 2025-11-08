@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia&display=swap');
+:root{
+    --primary-color:rgb(255,255,255);
+    --secondary-color:rgb(110, 35, 126);
+    --prim-text-color:rgb(0, 0, 0);
+    --second-text-color:rgb(255,255,255);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family:'Bebas Neue', sans-serif;
+    letter-spacing:.5px;
+    background-color:var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+nav a{
+    padding: 0.5em;
+    background-color:var(--primary-color);
+    border-radius: 10px;
+    color: var(--prim-text-color);
+    text-decoration: none;
+}
+nav a:hover{
+    background-color:var(--secondary-color);
+    color: var(--second-text-color);
+}
+.nav-con{
+  position: fixed;
+  top:0px;
+  height:60px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+nav{
+    background-color:var(--primary-color);
+    width:80%;
+    border-radius:40px;
+    min-width:250px;
+    height:50px;
+    padding:5px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+nav>img{
+    height:100%;
+    border-radius: 50%;
+}
+.link-con{
+    width:80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.link-con2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:crimson;
+    padding: 30px;
+    border:blue 5px solid;
+    border-radius: 15px;
+    width: 100%;
+    height:50vh;
+    margin:20px;
+    min-height: 400px;
+    max-width: 450px; 
+    min-width: 240px;
+}
+#contact{
+    height: fit-content;
+    margin-top: 60px;
+}
+label[for='message']{
+    color: #ffffff;
+}
+h2 {
+    text-align: center;
+    color:var(--second-text-color);
+    margin-bottom: 20px;
+}
+.registration-form {
+    display: grid;
+    grid-template-columns: min-content 1fr; 
+    gap: 15px 10px;
+    padding:1rem;
+    border-radius:20PX;
+}
+.form-group {
+    display: contents;
+}
+
+.form-group label {
+    font-weight: bold;
+    color:var(--second-text-color);
+    align-self: center; 
+    grid-column: 1 / 2; 
+    white-space: nowrap; 
+}
+.form-group input {
+    grid-column: 2 / 3; 
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.form-group input:hover{
+    background-color:violet;
+    color: #fff;
+}
+.form-group input:focus{
+    background-color: black;
+    color: white;
+}
+.terms-group {
+    grid-column: 1 / -1; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.terms-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.terms-group label {
+    font-weight: normal;
+    color:var(--second-text-color);
+}
+.terms-group a {
+    color: #007bff;
+    text-decoration: none;
+}
+.submit-button {
+    grid-column: 1 / -1; 
+    padding: 5px;
+    width:60%;
+    background-color:var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top:10px;
+    margin: auto;
+    font-family:'Bebas Neue', sans-serif ;
+    width:40%;
+    height: 2rem;
+    text-align: center;
+    border: black 2px solid;
+    border-radius: 15px;
+    transition:all 0.3s;
+}
+.submit-button:hover {
+    background-color:rgb(34, 0, 255);
+    width: 100%;
+    box-shadow:0px 5px 0px var(--primary-color);
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 14px;
+  }
+  .link-con{
+    display: none;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width:992px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    font-size: 18px;
+  }
+}

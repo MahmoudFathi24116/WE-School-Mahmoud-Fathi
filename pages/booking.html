@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Request</title>
+    <link rel="stylesheet" href="../styles/booking.css"></head>
+<body>
+    <div class="page-container">
+        <h2>Booking page</h2>
+        <form action="../index.html" class="booking-form">
+            <div class="form-field">
+                <label for="full_name">Full Name :</label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+            <div class="form-field">
+                <label for="email_address">Email Address :</label>
+                <input type="email" id="email_address" name="email_address" required>
+            </div>
+            <div class="form-field">
+                <label for="num_guests">Number of Guests :</label>
+                <input type="number" id="num_guests" name="num_guests" min="1" max="10" required>
+            </div>
+            <div class="form-field">
+                <label for="booking_date">Preferred Date :</label>
+                <input type="date" id="booking_date" name="booking_date" required>
+            </div>       
+            <div class="form-field">
+                <label for="service">Select Service :</label>
+                <select id="service" name="service" required>
+                    <option value="consultation">Consultation</option>
+                    <option value="training">Training Session</option>
+                    <option value="full_package">Full Package</option>
+                </select>
+            </div>
+            <div class="radio-group form-field-span">
+                <label>Room Preference:</label>
+                <div class="radio-options">
+                    <input type="radio" id="private" name="room_pref" value="private" required>
+                    <label for="private">Private Room</label>
+                    <input type="radio" id="shared" name="room_pref" value="shared">
+                    <label for="shared">Shared Space</label>
+                </div>
+            </div>
+            <div class="form-field-span">
+                <label for="requests">Special Requests:</label>
+                <textarea id="requests" name="requests" rows="4"></textarea>
+            </div>
+            <div class="form-field-span">
+                <label for="attachment">Upload Reference File (Optional):</label>
+                <input type="file" id="attachment" name="attachment">
+            </div>   
+            <div class="checkbox-group form-field-span">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to our newsletter</label>
+            </div>
+            <button type="submit" class="submit-button form-field-span">Confirm Booking</button>
+        </form>
+    </div>
+</body>
+</html>
